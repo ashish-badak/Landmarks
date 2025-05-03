@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Landmark: Decodable {
+struct Landmark: Decodable, Identifiable {
     struct Coordinates: Decodable {
         let longitude: Double
         let latitude: Double
