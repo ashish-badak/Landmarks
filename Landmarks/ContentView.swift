@@ -21,11 +21,11 @@ struct ContentView: View {
                         .font(.title)
                     HStack {
                         Text("Joshua Tree National Park")
-                            .font(.subheadline)
                         Spacer()
                         Text("California")
-                            .font(.subheadline)
                     }
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
                 }
                 .padding()
             }
