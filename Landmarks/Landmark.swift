@@ -10,7 +10,7 @@ import Foundation
 struct Landmark: Decodable {
     struct Coordinates: Decodable {
         let longitude: Double
-        let lattitude: Double
+        let latitude: Double
     }
     
     let id: Int
