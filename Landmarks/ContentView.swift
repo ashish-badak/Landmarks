@@ -37,8 +37,8 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .padding()
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
