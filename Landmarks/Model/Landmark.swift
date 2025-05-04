@@ -24,4 +24,3 @@ struct Landmark: Decodable, Identifiable {
     let state: String
     let coordinates: Coordinates
 }
-
