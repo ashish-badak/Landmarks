@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    let landmark: Landmark
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -43,5 +45,5 @@ struct LandmarkDetail: View {
 }
 
 #Preview {
-    LandmarkDetail()
+    LandmarkDetail(landmark: landmarks[0])
 }
