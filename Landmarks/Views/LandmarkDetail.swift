@@ -13,7 +13,7 @@ struct LandmarkDetail: View {
     var body: some View {
         ScrollView {
             VStack {
-                MapView()
+                MapView(coordinates: landmark.coordinates)
                     .frame(height: 300)
                 CircleImage(imageName: landmark.imageName)
                     .offset(y: -130)
