@@ -9,18 +9,15 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    let coordinates: Landmark.Coordinates
-    
+    var coordinate: CLLocationCoordinate2D
+
     var body: some View {
         Map(initialPosition: .region(region))
     }
-    
+
     private var region: MKCoordinateRegion {
         MKCoordinateRegion(
-            center: CLLocationCoordinate2D(
-                latitude: coordinates.latitude,
-                longitude: coordinates.longitude
-            ),
+            center: coordinate,
             span: MKCoordinateSpan(
                 latitudeDelta: 0.2,
                 longitudeDelta: 0.2
@@ -31,9 +28,9 @@ struct MapView: View {
 
 #Preview {
     MapView(
-        coordinates: Landmark.Coordinates(
-            longitude: -116.166_868,
-            latitude: 34.011_286
+        coordinate: CLLocationCoordinate2D(
+            latitude: 34.011_286,
+            longitude: -116.166_868
         )
     )
 }

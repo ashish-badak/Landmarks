@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct Landmark: Decodable, Identifiable, Hashable {
     struct Coordinates: Decodable, Hashable {
@@ -22,5 +23,12 @@ struct Landmark: Decodable, Identifiable, Hashable {
     
     let park: String
     let state: String
-    let coordinates: Coordinates
+    private let coordinates: Coordinates
+    
+    var locationCoordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(
+            latitude: coordinates.latitude,
+            longitude: coordinates.longitude
+        )
+    }
 }
