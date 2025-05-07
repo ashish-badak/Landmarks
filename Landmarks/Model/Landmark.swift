@@ -31,4 +31,6 @@ struct Landmark: Decodable, Identifiable, Hashable {
             longitude: coordinates.longitude
         )
     }
+    
+    var isFavorite: Bool
 }
